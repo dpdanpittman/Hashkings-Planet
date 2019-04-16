@@ -16,7 +16,7 @@ export class AppInlineProfile extends Component {
                 <div>
                     <img src="assets/layout/images/profile.png" alt="hashkings" />
                 </div>
-				<b>Welcome <a href="/#/empty"><font color="blue">{this.state.username}</font></a></b>
+				<b>Welcome <a href="/#/login"><font color="blue">{this.state.username}</font></a></b>
             </div>
         );
     }

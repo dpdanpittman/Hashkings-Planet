@@ -7,7 +7,7 @@ import {Route} from 'react-router-dom';
 import {Dashboard} from './components/Dashboard';
 import {SampleDemo} from './components/SampleDemo';
 import {DataDemo} from './components/DataDemo';
-import {EmptyPage} from './components/EmptyPage';
+import {LoginPage} from './components/LoginPage';
 import {ScrollPanel} from 'primereact/components/scrollpanel/ScrollPanel';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
@@ -106,15 +106,15 @@ class App extends Component {
             {
                 label: 'Ganja Farm', icon: 'pi pi-fw pi-globe', /*badge: '9',*/
                 items: [
-					{label: 'Garden', icon: 'pi pi-fw pi-file', to: '/samples'},
-					{label: 'Inventory', icon: 'pi pi-fw pi-table', to: '/data'},
+					{label: 'Garden', icon: 'pi pi-fw pi-file', to: '/garden'},
+					{label: 'Inventory', icon: 'pi pi-fw pi-table', to: '/inventory'},
                 ]
             },
             {
                 label: 'Marketplace', icon: 'pi pi-fw pi-file',
                 items: [
-                    {label: 'Garden Plots', icon: 'pi pi-fw pi-circle-off', to: '/data'},
-					{label: 'Seeds', icon: 'pi pi-fw pi-circle-off', to: '/samples'}
+                    {label: 'Garden Plots', icon: 'pi pi-fw pi-circle-off', to: '/market/gardenplots'},
+					{label: 'Seeds', icon: 'pi pi-fw pi-circle-off', to: '/market/seedbank'}
                 ]
             },
 			{label: 'CannaDex(Coming Soon)', icon: 'pi pi-fw pi-file', command: () => {window.location = "https://steempeak.com/@hashkings"}}
@@ -176,10 +176,11 @@ class App extends Component {
                 </div>
                 <div className="layout-main">
                     <Route path="/" exact component={Dashboard} />
-                    <Route path="/empty" component={EmptyPage} />
-                    <Route path="/samples" component={SampleDemo} />
-                    <Route path="/data" component={DataDemo} />
-                    <Route path="/login" component={EmptyPage} />
+                    <Route path="/garden" component={SampleDemo} />
+                    <Route path="/inventory" component={SampleDemo} />
+                    <Route path="/market/gardenplots" component={SampleDemo} />
+					<Route path="/market/seedbank" component={SampleDemo} />
+                    <Route path="/login" component={LoginPage} />
                 </div>
                 <div className="layout-mask"></div>
             </div>
