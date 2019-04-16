@@ -1,6 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import ReactDOM from 'react-dom';
 import 'babel-polyfill';
 import App from './App';

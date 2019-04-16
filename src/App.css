@@ -1,1 +1,3 @@
-/* Place your extensions here to make migration to a new release easier. */
+.bgimg {
+    background-image: url('http://inn.spb.ru/images/700/DSC100781997.jpg');
+}

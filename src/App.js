@@ -5,9 +5,11 @@ import {AppMenu} from './AppMenu';
 import {AppInlineProfile} from './AppInlineProfile';
 import {Route} from 'react-router-dom';
 import {Dashboard} from './components/Dashboard';
-import {SampleDemo} from './components/SampleDemo';
-import {DataDemo} from './components/DataDemo';
 import {LoginPage} from './components/LoginPage';
+import {GardenPage} from './components/GardenPage';
+import {InventoryPage} from './components/InventoryPage';
+import {MarketPlots} from './components/MarketPlots';
+import {MarketSeeds} from './components/MarketSeeds';
 import {ScrollPanel} from 'primereact/components/scrollpanel/ScrollPanel';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
@@ -175,12 +177,12 @@ class App extends Component {
                     </ScrollPanel>
                 </div>
                 <div className="layout-main">
+				    <Route path="/login" component={LoginPage} />
                     <Route path="/" exact component={Dashboard} />
-                    <Route path="/garden" component={SampleDemo} />
-                    <Route path="/inventory" component={SampleDemo} />
-                    <Route path="/market/gardenplots" component={SampleDemo} />
-					<Route path="/market/seedbank" component={SampleDemo} />
-                    <Route path="/login" component={LoginPage} />
+                    <Route path="/garden" component={GardenPage} />
+                    <Route path="/inventory" component={InventoryPage} />
+                    <Route path="/market/gardenplots" component={MarketPlots} />
+					<Route path="/market/seedbank" component={MarketSeeds} />
                 </div>
                 <div className="layout-mask"></div>
             </div>
