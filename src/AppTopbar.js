@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {InputText} from 'primereact/inputtext';
 import PropTypes from 'prop-types';
 
 export class AppTopbar extends Component {
@@ -14,7 +15,7 @@ export class AppTopbar extends Component {
     render() {
         return (
             <div className="layout-topbar clearfix">
-                <div className="layout-topbar-text">
+                <div className="layout-topbar-icons">
                     <button className="p-link">
                         <span className="layout-topbar-item-text">Events</span>
                         <span className="layout-topbar-icon pi pi-calendar"/>
