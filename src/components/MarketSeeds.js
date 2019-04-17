@@ -356,276 +356,66 @@ export class MarketSeeds extends Component {
         return (
             <div className="p-fluid">
                 <div className="p-grid">
-                    <div className="p-col-12">
-                        <div className="p-messages p-component p-messages-success" style={{margin: '0 0 1em 0', display: 'block'}}>
-                            <div className="p-messages-wrapper">
-                                <span className="p-messages-icon pi pi-fw pi-2x pi-check"></span>
-                                <ul>
-                                    <li>
-                                        <span className="p-messages-detail">Designer API is a theme engine for the complete PrimeReact UI Suite and includes this demo application 
-                                        to test the commonly used components while designing your theme.
-                                        </span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
+					<div className="p-col-3">
+					</div>
+                    <div className="p-col-6">
                         <div className="card card-w-title">
-                            <h1>Form Elements</h1>
+                            <h1>Hand-Picked Seeds</h1>
                             <div className="p-grid">
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="input">Input</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <InputText id="input" />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="textarea">Textarea</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <InputTextarea id="textarea" rows={3} cols={30} autoResize={true}></InputTextarea>
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="calendar">Calendar</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Calendar id="calendar" value={this.state.date} onChange={event => this.setState({date: event.value})}></Calendar>
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="autocomplete">AutoComplete</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <AutoComplete minLength={1} placeholder="Countries" id="autocomplete" field="name" suggestions={this.state.filteredCountries}
-                                                completeMethod={this.filterCountry} value={this.state.country}
-                                                onChange={event => this.setState({country: event.value, filteredCountries: null})}
-                                    />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="dropdown">Dropdown</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Dropdown options={this.state.cities} value={this.state.dropdownCity} onChange={event => this.setState({dropdownCity: event.value})} autoWidth={false} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="password">Password</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Password id="password" />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="mask">Mask</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <InputMask id="mask" mask="99/99/9999" slotChar="dd/mm/yyyy" placeholder="Date" />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="spinner">Spinner</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Spinner value={this.state.spinnerValue} onChange={event => this.setState({spinnerValue: event.value})} />
-                                </div>
-
-                                <div className="p-col-12 p-md-2">
-                                    Checkbox
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <div className="p-grid">
-                                        <div className="p-col-12">
-                                            <Checkbox value="Ultima" inputId="cb1" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Ultima') > -1} />
-                                            <label htmlFor="cb1" className="p-checkbox-label">Ultima</label>
-                                        </div>
-                                        <div className="p-col-12">
-                                            <Checkbox value="Avalon" inputId="cb2" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Avalon') > -1} />
-                                            <label htmlFor="cb2" className="p-checkbox-label">Avalon</label>
-                                        </div>
-                                        <div className="p-col-12">
-                                            <Checkbox value="Serenity" inputId="cb3" onChange={this.onCheckboxChange} checked={this.state.checkboxValue.indexOf('Serenity') > -1} />
-                                            <label htmlFor="cb3" className="p-checkbox-label">Serenity</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    RadioButton
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <div className="p-grid">
-                                        <div className="p-col-12">
-                                            <RadioButton value="Ultima" inputId="rb1" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Ultima"} />
-                                            <label htmlFor="rb1" className="p-radiobutton-label">Ultima</label>
-                                        </div>
-                                        <div className="p-col-12">
-                                            <RadioButton value="Avalon" inputId="rb2" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Avalon"} />
-                                            <label htmlFor="rb2" className="p-radiobutton-label">Avalon</label>
-                                        </div>
-                                        <div className="p-col-12">
-                                            <RadioButton value="Serenity" inputId="rb3" onChange={event => this.setState({radioValue: event.value})} checked={this.state.radioValue === "Serenity"} />
-                                            <label htmlFor="rb3" className="p-radiobutton-label">Serenity</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="slider">Slider</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Slider id="slider" value={this.state.sliderValue} onChange={event => this.setState({sliderValue: event.value})} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    Button
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Button label="Edit" icon="pi pi-pencil" />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    SplitButton
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <SplitButton label="Save" icon="pi pi-plus" model={this.state.splitButtonItems} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="multiselect">MultiSelect</label>
+								<div className="p-col-12 p-md-2">
+                                    <label htmlFor="multiselect"></label>
                                 </div>
                                 <div className="p-col-12 p-md-4">
                                     <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
                                 </div>
-                                <div className="p-col-12 p-md-2">
-                                    ToggleButton
+								<div className="p-col-12 p-md-4">
+                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
-                                <div className="p-col-12 p-md-4">
-                                    <ToggleButton checked={this.state.toggleButtonValue} onChange={event => this.setState({toggleButtonValue: event.value})} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    SelectButton
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <SelectButton value={this.state.selectedType} options={this.state.types} onChange={event => this.setState({selectedType: event.value})} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    <label htmlFor="listbox">ListBox</label>
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <ListBox value={this.state.listBoxCity} options={this.state.listBoxCities} onChange={event => this.setState({listBoxCity: event.value})} filter={true} />
-                                </div>
-                                <div className="p-col-12 p-md-2">
-                                    Dialog
-                                </div>
-                                <div className="p-col-12 p-md-4">
-                                    <Button label="Login" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
-                                </div>
-                            </div>
-
-                            <Dialog header="Login" visible={this.state.dialogVisible} footer={dialogFooter} onHide={() => this.setState({dialogVisible:false})}>
-                                <div className="p-grid">
-                                    <div className="p-col-12">
-                                        <InputText placeholder="Username" />
-                                    </div>
-                                    <div className="p-col-12">
-                                        <InputText placeholder="Password" />
-                                    </div>
-                                </div>
-                            </Dialog>
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>DataTable</h1>
-                            <DataTable value={this.state.dataTableValue} selectionMode="single" header="DataTable" selection={this.state.dataTableSelection}
-                                    onSelectionChange={event => this.setState({dataTableSelection: event.value})}>
-                                <Column field="vin" header="Vin" sortable={true} />
-                                <Column field="year" header="Year" sortable={true} />
-                                <Column field="brand" header="Brand" sortable={true} />
-                                <Column field="color" header="Color" sortable={true} />
-                            </DataTable>
+							</div>
                         </div>
                     </div>
-                    <div className="p-col-12">
+					<div className="p-col-3">
+					</div>
+					<div className="p-col-3">
+					</div>
+                    <div className="p-col-6">
                         <div className="card card-w-title">
-                            <h1>DataView</h1>
-                            <DataView ref={el => this.dv = el} value={this.state.dataViewValue} filterBy="brand" itemTemplate={this.dataViewItemTemplate}
-                                    paginatorPosition="both" paginator={true} rows={10} header={dataViewHeader} layout={this.state.layout} />
+                            <h1>Premium Seeds</h1>
+                            <div className="p-grid">
+								<div className="p-col-12 p-md-2">
+                                    <label htmlFor="multiselect"></label>
+                                </div>
+                                <div className="p-col-12 p-md-4">
+                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
+                                </div>
+								<div className="p-col-12 p-md-4">
+                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
+                                </div>
+							</div>
                         </div>
                     </div>
-                    <div className="p-col-12 p-lg-6">
+					<div className="p-col-3">
+					</div>
+					<div className="p-col-3">
+					</div>
+                    <div className="p-col-6">
                         <div className="card card-w-title">
-                            <h1>PickList</h1>
-                            <PickList source={this.state.picklistSourceCars} target={this.state.picklistTargetCars} sourceHeader="Available" targetHeader="Selected"
-                                    responsive={true} itemTemplate={(car) => <span>{car.brand}</span>} 
-                                    onChange={event => this.setState({picklistSourceCars: event.source, picklistTargetCars: event.target})} />
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>OrderList</h1>
-                            <OrderList value={this.state.orderlistCars} responsive={true} header="OrderList" listStyle={{height:250}}
-                                    itemTemplate={this.orderListTemplate} onChange={event => this.setState({orderlistCars: event.value})} />
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>ProgressBar</h1>
-                            <ProgressBar value={50} />
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>PanelMenu</h1>
-                            <PanelMenu model={this.state.panelMenuItems} />
+                            <h1>Basic Seeds</h1>
+                            <div className="p-grid">
+								<div className="p-col-12 p-md-2">
+                                    <label htmlFor="multiselect"></label>
+                                </div>
+                                <div className="p-col-12 p-md-4">
+                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
+                                </div>
+																<div className="p-col-12 p-md-4">
+                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
+                                </div>
+							</div>
                         </div>
                     </div>
-                    <div className="p-col-12 p-lg-6">
-                        <div className="card card-w-title">
-                            <h1>Accordion Panel</h1>
-                            <Accordion>
-                                <AccordionTab header="Godfather I">
-                                    The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughters wedding.
-                                    His beloved son Michael has just come home from the war, but does not intend to become part of his fathers business.
-                                    Through Michaels life the nature of the family business becomes clear. The business of the family is just like the head
-                                    of the family, kind and benevolent to those who give respect,
-                                    but given to ruthless violence whenever anything stands against the good of the family.
-                                </AccordionTab>
-                                <AccordionTab header="Godfather II">
-                                    Francis Ford Coppolas legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young
-                                    Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfathers depiction of the dark side of
-                                    the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family.
-                                    Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy, killing the local Black Hand
-                                    Fanucci after he demands his customary cut of the tyro's business. With Fanucci gone, Vito's communal stature grows.
-                                </AccordionTab>
-                                <AccordionTab header="Godfather III">
-                                    After a break of more than 15 years, director Francis Ford Coppola and writer Mario Puzo returned to the well for this
-                                    third and final story of the fictional Corleone crime family. Two decades have passed, and crime kingpin Michael Corleone,
-                                    now divorced from his wife Kay has nearly succeeded in keeping his promise that his family would one day be completely legitimate.
-                                </AccordionTab>
-                            </Accordion>
-
-                            <h1>TabView</h1>
-                            <TabView>
-                                <TabPanel header="Godfather I" leftIcon="pi pi-check">
-                                    The story begins as Don Vito Corleone, the head of a New York Mafia family, overseeshis daughter's wedding. His beloved son ichael has just come home from the war, but does not intend to become part of his father's business. Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family, kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
-                                </TabPanel>
-                                <TabPanel header="Godfather II" leftIcon="pi pi-user">
-                                    Francis Ford Coppola's legendary continuation and sequel to his landmark 1972 film, The_Godfather parallels the young Vito Corleone's rise with his son Michael's spiritual fall, deepening The_Godfather's depiction of the dark side of the American dream. In the early 1900s, the child Vito flees his Sicilian village for America after the local Mafia kills his family. Vito struggles to make a living, legally or illegally, for his wife and growing brood in Little Italy.
-                                </TabPanel>
-                                <TabPanel header="Godfather III">
-                                    The Godfather Part III is set in 1979 and 1980. Michael has moved back to New York and taken great strides to remove the family from crime. He turns over his New York criminal interests to longtime enforcer Joey Zasa. He uses his wealth in an attempt to rehabilitate his reputation through numerous philanthropic acts, administered by a foundation named after his father. A decade earlier, he gave custody of his two children to Kay, who has since remarried.
-                                </TabPanel>
-                            </TabView>
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>Panel</h1>
-                            <Panel header="Godfather I" toggleable={true}>
-                                The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
-                                His beloved son Michael has just come home from the war, but does not intend to become part of his father's business.
-                                Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family,
-                                kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
-                            </Panel>
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>Tree</h1>
-                            <Tree value={this.state.treeData} selectionMode="single" selectionKeys={this.state.selectedNodeKey} onSelectionChange={e => this.setState({selectedNodeKey: e.value})}/>
-                        </div>
-
-                        <div className="card card-w-title">
-                            <h1>Menu</h1>
-                            <Menu model={this.state.menuItems} />
-                        </div>
-                    </div>
+					<div className="p-col-3">
+					</div>
                 </div>
             </div>
         );

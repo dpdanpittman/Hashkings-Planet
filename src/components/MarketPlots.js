@@ -343,8 +343,9 @@ export class MarketPlots extends Component {
             <div className="p-fluid">
                 <div className="p-grid">
                     <div className="p-col-12">
-						<center><ImageGallery items={images} /></center>
-						
+						<div className="card card-w-title">
+							<center><ImageGallery items={images} /></center>
+						</div>
                         <div className="card card-w-title">
                             <h1>Welcome to Garden Sales</h1>
                             <div className="p-grid">
