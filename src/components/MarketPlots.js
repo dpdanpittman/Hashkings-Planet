@@ -346,7 +346,7 @@ export class MarketPlots extends Component {
 						<div className="card card-w-title">
 							<center><ImageGallery items={images} /></center>
 						</div>
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Welcome to Garden Sales</h1>
                             <div className="p-grid">
 							  <h4><b><font color="green">Below you will find our Avaialable Plots. In order to Lease a garden please choose how many Gardens you would like then choose your favorite regions.</font></b></h4>
