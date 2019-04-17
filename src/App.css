@@ -3,6 +3,7 @@
 }
 
 .bgWeedimg {
+	border-radius: 25px;
     background-image: url('https://i.imgur.com/gYfDO7V.jpg');
 }
 
@@ -31,6 +32,7 @@
 }
 
 .card-weedLeft {
+	border-radius: 25px;
     background-image: url("https://www.cannareupstore.com/image/cache/catalog/rsz_marijuana-banner-1140x380.png");
     padding: 1em;
     margin-bottom: 16px;
