@@ -173,12 +173,26 @@ export class MarketSeeds extends Component {
 
     render() {
         return (
-            <div className="p-fluid">
+            <div className="p-fluid bgimg">
                 <div className="p-grid">
-					<div className="p-col-3">
+				<div className="p-col-8">
+					<div className="card-blank card-w-title bgWeedimg">
+					<h1><font color="white">Welcome to the Hashkings Dispensary</font></h1>
+					<br/>
+					<h4>Hand-Picked Seeds</h4>
+					<p><font color="white">These are the best seeds in our seed bank and come with 2250 XP. For 3 Steem you will be able to purchase one of these top shelf seeds.</font></p>
+					<h4>Premium Seeds</h4>
+					<p><font color="white">Looking to grow get your feet wet and find new traits with these 750 XP seeds for 1.5 Steem</font></p>
+					<h4>Basic Seeds</h4>
+					<p><font color="white">These seeds come with 1 XP and cost .75 Steem. These seeds are for the casual gardner looking to earn only passive income from their crops</font></p>
 					</div>
+					</div>
+					<div className="p-col-4">
+					</div>
+					<div className="p-col-3">
+				</div>
                     <div className="p-col-6">
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Hand-Picked Seeds</h1>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
@@ -198,7 +212,7 @@ export class MarketSeeds extends Component {
 					<div className="p-col-3">
 					</div>
                     <div className="p-col-6">
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Premium Seeds</h1>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
@@ -218,7 +232,7 @@ export class MarketSeeds extends Component {
 					<div className="p-col-3">
 					</div>
                     <div className="p-col-6">
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Basic Seeds</h1>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
@@ -234,6 +248,39 @@ export class MarketSeeds extends Component {
                         </div>
                     </div>
 					<div className="p-col-3">
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
+					</div>
+					<div className="p-col-3">
+					<div className="card-blank card-w-title">
+					</div>
 					</div>
                 </div>
             </div>
