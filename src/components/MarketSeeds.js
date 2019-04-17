@@ -193,7 +193,9 @@ export class MarketSeeds extends Component {
 				</div>
                     <div className="p-col-6">
                         <div className="card-blank card-w-title">
-                            <h1>Hand-Picked Seeds</h1>
+                            <h1><font color="blue">Hand-Picked Seeds</font></h1>
+							<h2><b>3 Steem</b></h2>
+							<br/>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
                                     <label htmlFor="multiselect"></label>
@@ -213,7 +215,9 @@ export class MarketSeeds extends Component {
 					</div>
                     <div className="p-col-6">
                         <div className="card-blank card-w-title">
-                            <h1>Premium Seeds</h1>
+                            <h1><font color="green">Premium Seeds</font></h1>
+							<h2><b>1.5 Steem</b></h2>
+							<br/>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
                                     <label htmlFor="multiselect"></label>
@@ -234,6 +238,8 @@ export class MarketSeeds extends Component {
                     <div className="p-col-6">
                         <div className="card-blank card-w-title">
                             <h1>Basic Seeds</h1>
+							<h2><b>.75 Steem</b></h2>
+							<br/>
                             <div className="p-grid">
 								<div className="p-col-12 p-md-2">
                                     <label htmlFor="multiselect"></label>
@@ -241,46 +247,13 @@ export class MarketSeeds extends Component {
                                 <div className="p-col-12 p-md-4">
                                     <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedHandPickedSeeds} options={this.state.HandPickedOptions} onChange={event => this.setState({selectedHandPickedSeeds: event.value})} />
                                 </div>
-																<div className="p-col-12 p-md-4">
+								<div className="p-col-12 p-md-4">
                                     <Button label="Lease Gardens" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
 							</div>
                         </div>
                     </div>
 					<div className="p-col-3">
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
-					</div>
-					<div className="p-col-3">
-					<div className="card-blank card-w-title">
-					</div>
 					</div>
                 </div>
             </div>

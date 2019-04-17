@@ -31,8 +31,7 @@ import {Panel} from 'primereact/panel';
 import {TabView, TabPanel} from 'primereact/tabview';
 import {ProgressBar} from 'primereact/progressbar';
 import {Dialog} from 'primereact/dialog';
-import {Column} from 'primereact/column';
-
+import {Column} from 'primereact/column'
 export class InventoryPage extends Component {
 
     constructor() {
