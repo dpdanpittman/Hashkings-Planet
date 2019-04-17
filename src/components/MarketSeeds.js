@@ -38,199 +38,62 @@ export class MarketSeeds extends Component {
     constructor() {
         super();
         this.state = {
-            date: null,
-            country: null,
-            filteredCountries: null,
-            countriesData: [],
-            dropdownCity: null,
-			selectedNodeKey: null,
-            cities: [
-                {label: 'Select City', value: null},
-                {label: 'New York', value: 'New York'},
-                {label: 'Rome', value: 'Rome'},
-                {label: 'London', value: 'London'},
-                {label: 'Istanbul', value: 'Istanbul'},
-                {label: 'Paris', value: 'Paris'},
+            selectedHandPickedSeeds: [],
+            HandPickedOptions: [
+                {label: 'Hindu Kush', value: 'hk'},
+                {label: 'Afghani', value: 'afg'},
+                {label: 'Lashkar Gah', value: 'lkg'},
+                {label: 'Mazar i Sharif', value: 'mis'},
+                {label: 'Lambs Bread', value: 'lb'},
+                {label: 'Kings Bread', value: 'kbr'},
+                {label: 'Acapulco Gold', value: 'aca'},
+                {label: 'Swazi Gold', value: 'swz'},
+                {label: 'Kilimanjaro', value: 'kmj'},
+                {label: 'Durban Poison', value: 'dp'},
+                {label: 'Malawi', value: 'mal'},
+				{label: 'Panama Red', value: 'pam'},
+                {label: 'Columbian Gold', value: 'cg'},
+				{label: 'Aceh', value: 'ach'},
+				{label: 'Thai', value: 'tha'},
+				{label: 'Chocoloate Thai', value: 'cht'}
             ],
-            spinnerValue: null,
-            checkboxValue: [],
-            radioValue: null,
-            sliderValue: null,
-            toggleButtonValue: null,
-            dialogVisible: false,
-            dataTableValue: [],
-            dataTableSelection: null,
-            dataViewValue: [],
-            treeData: [],
-            picklistSourceCars: [],
-            picklistTargetCars: [],
-            orderlistCars: [],
-            layout: 'list',
-            selectedCars: [],
-            carOptions: [
-                {label: 'Audi', value: 'Audi'},
-                {label: 'BMW', value: 'BMW'},
-                {label: 'Fiat', value: 'Fiat'},
-                {label: 'Honda', value: 'Honda'},
-                {label: 'Jaguar', value: 'Jaguar'},
-                {label: 'Mercedes', value: 'Mercedes'},
-                {label: 'Renault', value: 'Renault'},
-                {label: 'VW', value: 'VW'},
-                {label: 'Volvo', value: 'Volvo'}
+			selectedPremiumSeeds: [],
+			PremiumOptions: [
+                {label: 'Hindu Kush', value: 'hk'},
+                {label: 'Afghani', value: 'afg'},
+                {label: 'Lashkar Gah', value: 'lkg'},
+                {label: 'Mazar i Sharif', value: 'mis'},
+                {label: 'Lambs Bread', value: 'lb'},
+                {label: 'Kings Bread', value: 'kbr'},
+                {label: 'Acapulco Gold', value: 'aca'},
+                {label: 'Swazi Gold', value: 'swz'},
+                {label: 'Kilimanjaro', value: 'kmj'},
+                {label: 'Durban Poison', value: 'dp'},
+                {label: 'Malawi', value: 'mal'},
+				{label: 'Panama Red', value: 'pam'},
+                {label: 'Columbian Gold', value: 'cg'},
+				{label: 'Aceh', value: 'ach'},
+				{label: 'Thai', value: 'tha'},
+				{label: 'Chocoloate Thai', value: 'cht'}
             ],
-            listBoxCity: null,
-            listBoxCities: [
-                {label: 'Madrid', value: 'Madrid'},
-                {label: 'Geneva', value: 'Geneva'},
-                {label: 'Los Angeles', value: 'Los Angeles'},
-                {label: 'Monaco', value: 'Monaco'},
-                {label: 'Berlin', value: 'Berlin'}
-            ],
-            selectedType: null,
-            types: [
-                {label: 'Apartment', value: 'Apartment'},
-                {label: 'House', value: 'House'},
-                {label: 'Studio', value: 'Studio'}
-            ],    
-            splitButtonItems: [
-                {label: 'Update', icon: 'pi pi-refresh'},
-                {label: 'Delete', icon: 'pi pi-times'},
-                {label: 'Home', icon: 'pi pi-home', url: 'http://www.primefaces.org/primereact'}
-            ],
-            menuItems: [
-                {
-                    label: 'Options',
-                    items: [{label: 'New', icon: 'pi pi-fw pi-plus',command:() => window.location.hash="/fileupload"},
-                            {label: 'Delete', icon: 'pi pi-fw pi-trash', url: 'http://primetek.com.tr'}]
-                }, 
-                {
-                    label: 'Account',
-                    items: [{label: 'Options', icon: 'pi pi-fw pi-cog',command:() => window.location.hash="/"},
-                            {label: 'Sign Out', icon: 'pi pi-fw pi-power-off'} ]
-                }
-            ],
-            panelMenuItems: [
-                {
-                    label:'Documents',
-                    icon:'pi pi-fw pi-file',
-                    items:[
-                       {
-                          label:'New',
-                          icon:'pi pi-fw pi-plus',
-                          items:[
-                             {
-                                label:'Bookmark',
-                                icon:'pi pi-fw pi-bookmark'
-                             },
-                             {
-                                label:'Video',
-                                icon:'pi pi-fw pi-video'
-                             },
-              
-                          ]
-                       },
-                       {
-                          label:'Delete',
-                          icon:'pi pi-fw pi-trash'
-                       },
-                       {
-                          separator:true
-                       },
-                       {
-                          label:'Export',
-                          icon:'pi pi-fw pi-external-link'
-                       }
-                    ]
-                 },
-                 {
-                    label:'Manage',
-                    icon:'pi pi-fw pi-pencil',
-                    items:[
-                       {
-                          label:'Left',
-                          icon:'pi pi-fw pi-align-left'
-                       },
-                       {
-                          label:'Right',
-                          icon:'pi pi-fw pi-align-right'
-                       },
-                       {
-                          label:'Center',
-                          icon:'pi pi-fw pi-align-center'
-                       },
-                       {
-                          label:'Justify',
-                          icon:'pi pi-fw pi-align-justify'
-                       },
-              
-                    ]
-                 },
-                 {
-                    label:'Accounts',
-                    icon:'pi pi-fw pi-user',
-                    items:[
-                       {
-                          label:'New',
-                          icon:'pi pi-fw pi-user-plus',
-              
-                       },
-                       {
-                          label:'Delete',
-                          icon:'pi pi-fw pi-user-minus',
-              
-                       },
-                       {
-                          label:'Search',
-                          icon:'pi pi-fw pi-users',
-                          items:[
-                             {
-                                label:'Filter',
-                                icon:'pi pi-fw pi-filter',
-                                items:[
-                                   {
-                                      label:'Print',
-                                      icon:'pi pi-fw pi-print'
-                                   }
-                                ]
-                             },
-                             {
-                                icon:'pi pi-fw pi-bars',
-                                label:'List'
-                             }
-                          ]
-                       }
-                    ]
-                 },
-                 {
-                    label:'Calendar',
-                    icon:'pi pi-fw pi-calendar',
-                    items:[
-                       {
-                          label:'Edit',
-                          icon:'pi pi-fw pi-pencil',
-                          items:[
-                             {
-                                label:'Save',
-                                icon:'pi pi-fw pi-calendar-plus'
-                             },
-                             {
-                                label:'Delete',
-                                icon:'pi pi-fw pi-calendar-minus'
-                             }
-                          ]
-                       },
-                       {
-                          label:'Archieve',
-                          icon:'pi pi-fw pi-calendar-times',
-                          items:[
-                             {
-                                label:'Remove',
-                                icon:'pi pi-fw pi-calendar-minus'
-                             }
-                          ]
-                       }
-                    ]
-                 }
+			selectedBasicSeeds: [],
+			BasicOptions: [
+                {label: 'Hindu Kush', value: 'hk'},
+                {label: 'Afghani', value: 'afg'},
+                {label: 'Lashkar Gah', value: 'lkg'},
+                {label: 'Mazar i Sharif', value: 'mis'},
+                {label: 'Lambs Bread', value: 'lb'},
+                {label: 'Kings Bread', value: 'kbr'},
+                {label: 'Acapulco Gold', value: 'aca'},
+                {label: 'Swazi Gold', value: 'swz'},
+                {label: 'Kilimanjaro', value: 'kmj'},
+                {label: 'Durban Poison', value: 'dp'},
+                {label: 'Malawi', value: 'mal'},
+				{label: 'Panama Red', value: 'pam'},
+                {label: 'Columbian Gold', value: 'cg'},
+				{label: 'Aceh', value: 'ach'},
+				{label: 'Thai', value: 'tha'},
+				{label: 'Chocoloate Thai', value: 'cht'}
             ]
         };
 
@@ -366,10 +229,10 @@ export class MarketSeeds extends Component {
                                     <label htmlFor="multiselect"></label>
                                 </div>
                                 <div className="p-col-12 p-md-4">
-                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
+                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedBasicSeeds} options={this.state.BasicOptions} onChange={event => this.setState({selectedBasicSeeds: event.value})} />
                                 </div>
 								<div className="p-col-12 p-md-4">
-                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
+                                    <Button label="Lease Gardens" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
 							</div>
                         </div>
@@ -386,10 +249,10 @@ export class MarketSeeds extends Component {
                                     <label htmlFor="multiselect"></label>
                                 </div>
                                 <div className="p-col-12 p-md-4">
-                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
+                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedPremiumSeeds} options={this.state.PremiumOptions} onChange={event => this.setState({selectedPremiumSeeds: event.value})} />
                                 </div>
 								<div className="p-col-12 p-md-4">
-                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
+                                    <Button label="Lease Gardens" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
 							</div>
                         </div>
@@ -406,10 +269,10 @@ export class MarketSeeds extends Component {
                                     <label htmlFor="multiselect"></label>
                                 </div>
                                 <div className="p-col-12 p-md-4">
-                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedCars} options={this.state.carOptions} onChange={event => this.setState({selectedCars: event.value})} />
+                                    <MultiSelect id="multiselect" placeholder="Choose" value={this.state.selectedHandPickedSeeds} options={this.state.HandPickedOptions} onChange={event => this.setState({selectedHandPickedSeeds: event.value})} />
                                 </div>
 																<div className="p-col-12 p-md-4">
-                                    <Button label="Buy Seeds" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
+                                    <Button label="Lease Gardens" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
 							</div>
                         </div>
