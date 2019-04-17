@@ -395,10 +395,6 @@ export class MarketPlots extends Component {
                                 <div className="p-col-12 p-md-4">
                                     <Button label="Delegate" icon="pi pi-external-link" onClick={() => this.setState({dialogVisible:true})} />
                                 </div>
-								<div className="card card-w-title">
-                            <h1>ProgressBar</h1>
-                            <ProgressBar value={50} />
-                        </div>
                             </div>
                         </div>
                     </div>
