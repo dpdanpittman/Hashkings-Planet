@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'babel-polyfill';
 import App from './App';
-//import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './serviceWorker';
 import { HashRouter } from 'react-router-dom'
 import ScrollToTop from './ScrollToTop';
 
