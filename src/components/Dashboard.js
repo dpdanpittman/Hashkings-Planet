@@ -51,10 +51,6 @@ export class Dashboard extends Component {
         this.setState({city: e.value});
     }
 
-    componentDidMount() {
-        this.carservice.getCarsSmall().then(data => this.setState({cars: data}));
-    }
-
     render() {
 
         let fullcalendarOptions = {
