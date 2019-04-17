@@ -6,7 +6,6 @@ import {Checkbox} from 'primereact/checkbox';
 import {ListBox} from 'primereact/listbox';
 import {Button} from 'primereact/button';
 import {Panel} from 'primereact/panel';
-import {ProgressBar} from 'primereact/progressbar';
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 
