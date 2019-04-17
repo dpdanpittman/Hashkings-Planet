@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import {CarService} from '../service/CarService';
 import {Panel} from 'primereact/panel';
-import {Checkbox} from 'primereact/checkbox';
 import {Button} from 'primereact/button';
-import {Dropdown} from 'primereact/dropdown';
-import {InputText} from 'primereact/inputtext';
 import {Chart} from 'primereact/chart';
-import {DataTable} from 'primereact/datatable';
-import {Column} from 'primereact/column';
 import {FullCalendar} from 'primereact/fullcalendar';
 
 export class Dashboard extends Component {
@@ -61,13 +56,6 @@ export class Dashboard extends Component {
     }
 
     render() {
-        let cities = [
-            {label:'New York', value:{id:1, name: 'New York', code: 'NY'}},
-            {label:'Rome', value:{id:2, name: 'Rome', code: 'RM'}},
-            {label:'London', value:{id:3, name: 'London', code: 'LDN'}},
-            {label:'Istanbul', value:{id:4, name: 'Istanbul', code: 'IST'}},
-            {label:'Paris', value:{id:5, name: 'Paris', code: 'PRS'}}
-        ];
 
         let fullcalendarOptions = {
 			defaultDate: '2017-02-01',

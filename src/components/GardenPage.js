@@ -2,36 +2,8 @@ import React, {Component} from 'react';
 import {CountryService} from '../service/CountryService';
 import {CarService} from '../service/CarService';
 import {NodeService} from '../service/NodeService';
-import {InputText} from 'primereact/inputtext';
-import {InputTextarea} from 'primereact/inputtextarea';
-import {AutoComplete} from 'primereact/autocomplete';
-import {MultiSelect} from 'primereact/multiselect';
-import {Calendar} from 'primereact/calendar';
-import {DataTable} from 'primereact/datatable';
-import {DataView, DataViewLayoutOptions} from 'primereact/dataview';
-import {Tree} from 'primereact/tree';
-import {Checkbox} from 'primereact/checkbox';
-import {Menu} from 'primereact/menu';
-import {PanelMenu} from 'primereact/panelmenu';
-import {InputMask} from 'primereact/inputmask';
-import {Dropdown} from 'primereact/dropdown';
-import {Password} from 'primereact/password';
-import {Spinner} from 'primereact/spinner';
-import {Slider} from 'primereact/slider';
-import {ListBox} from 'primereact/listbox';
-import {RadioButton} from 'primereact/radiobutton';
-import {PickList} from 'primereact/picklist';
-import {OrderList} from 'primereact/orderlist';
-import {ToggleButton} from 'primereact/togglebutton';
-import {SelectButton} from 'primereact/selectbutton';
 import {Button} from 'primereact/button';
-import {SplitButton} from 'primereact/splitbutton';
-import {Accordion,AccordionTab} from 'primereact/accordion';
 import {Panel} from 'primereact/panel';
-import {TabView, TabPanel} from 'primereact/tabview';
-import {ProgressBar} from 'primereact/progressbar';
-import {Dialog} from 'primereact/dialog';
-import {Column} from 'primereact/column';
 
 export class GardenPage extends Component {
 
@@ -199,30 +171,19 @@ export class GardenPage extends Component {
     }
 
     render() {
-        const dialogFooter = (
-            <Button label="Login" icon="pi pi-user" onClick={() => this.setState({dialogValue:false})} />
-        );
-        
-        const dataViewHeader = (
-            <div className="p-grid">
-                <div className="p-col-6 p-md-8 filter-container">
-                    <div style={{position:'relative'}}>
-                        <InputText placeholder="Search by brand" onKeyUp={e => this.dv.filter(e.target.value)} />
-                    </div>
-                </div>
-                <div className="p-col-6 p-md-4" style={{textAlign: 'right'}}>
-                    <DataViewLayoutOptions layout={this.state.layout} onChange={(e) => this.setState({layout: e.value})} />
-                </div>
-            </div>
-        );
-
         return (
+		<div className="card-blank">
             <div className="p-fluid">
+			<div className="p-col-12">
+			<h1><b><u>Welcome to your Garden</u></b></h1>
+			<br/>
+			<p>Here is where you will perform all your Garden Actions</p>
+			</div>
                 <div className="p-grid">
 					<div className="p-col-3">
 					</div>
                     <div className="p-col-6">
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Plant a Seed</h1>
                             <div className="p-grid">
 								<div className="p-col-12">
@@ -232,11 +193,12 @@ export class GardenPage extends Component {
                         </div>
                     </div>
 					<div className="p-col-3">
+					<iframe title="sun giphy"src="https://giphy.com/embed/L08sJsg6tEUyb1E0VW" width="100" height="100" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 					</div>
 					<div className="p-col-3">
 					</div>
                     <div className="p-col-6">
-                        <div className="card card-w-title">
+                        <div className="card-blank card-w-title">
                             <h1>Water your Garden</h1>
                             <div className="p-grid">
 								<div className="p-col-12">
@@ -249,6 +211,36 @@ export class GardenPage extends Component {
 					</div>	
 				</div>
             </div>
+			<center>
+			<div className="p-col-12">
+			<img
+          alt="..."
+		  height="100px"
+          src={require("./weed_divider.png")}
+        />
+			</div>
+			</center>
+			<div className="p-col-12">
+				<div className="card-weedLeft card-w-title">
+					<h1><b>Inventory</b></h1>
+					<div className="p-grid">
+					<div className="card p-col-3 card-margin">
+					<h3><u>Active Gardens</u></h3>
+					</div>
+					<div className="card p-col-3 card-margin">
+					<h3><u>Available Gardens</u></h3>
+					</div>
+					<div className="card p-col-3 card-margin">
+					<h3><u>Available Seeds</u></h3>
+					</div>
+					</div>
+                </div>
+			<div className="p-col-12">
+			<h2>Grow Timer (Coming Soon)</h2>
+			</div>
+            </div>
+		</div>
+
         );
     }
 }

@@ -7,7 +7,6 @@ import {Route} from 'react-router-dom';
 import {Dashboard} from './components/Dashboard';
 import {LoginPage} from './components/LoginPage';
 import {GardenPage} from './components/GardenPage';
-import {InventoryPage} from './components/InventoryPage';
 import {MarketPlots} from './components/MarketPlots';
 import {MarketSeeds} from './components/MarketSeeds';
 import {ScrollPanel} from 'primereact/components/scrollpanel/ScrollPanel';

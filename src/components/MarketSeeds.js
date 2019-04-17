@@ -2,36 +2,9 @@ import React, {Component} from 'react';
 import {CountryService} from '../service/CountryService';
 import {CarService} from '../service/CarService';
 import {NodeService} from '../service/NodeService';
-import {InputText} from 'primereact/inputtext';
-import {InputTextarea} from 'primereact/inputtextarea';
-import {AutoComplete} from 'primereact/autocomplete';
 import {MultiSelect} from 'primereact/multiselect';
-import {Calendar} from 'primereact/calendar';
-import {DataTable} from 'primereact/datatable';
-import {DataView, DataViewLayoutOptions} from 'primereact/dataview';
-import {Tree} from 'primereact/tree';
-import {Checkbox} from 'primereact/checkbox';
-import {Menu} from 'primereact/menu';
-import {PanelMenu} from 'primereact/panelmenu';
-import {InputMask} from 'primereact/inputmask';
-import {Dropdown} from 'primereact/dropdown';
-import {Password} from 'primereact/password';
-import {Spinner} from 'primereact/spinner';
-import {Slider} from 'primereact/slider';
-import {ListBox} from 'primereact/listbox';
-import {RadioButton} from 'primereact/radiobutton';
-import {PickList} from 'primereact/picklist';
-import {OrderList} from 'primereact/orderlist';
-import {ToggleButton} from 'primereact/togglebutton';
-import {SelectButton} from 'primereact/selectbutton';
 import {Button} from 'primereact/button';
-import {SplitButton} from 'primereact/splitbutton';
-import {Accordion,AccordionTab} from 'primereact/accordion';
-import {Panel} from 'primereact/panel';
-import {TabView, TabPanel} from 'primereact/tabview';
-import {ProgressBar} from 'primereact/progressbar';
-import {Dialog} from 'primereact/dialog';
-import {Column} from 'primereact/column';
+import {Panel} from 'primereact/panel';;
 
 export class MarketSeeds extends Component {
 
@@ -199,23 +172,6 @@ export class MarketSeeds extends Component {
     }
 
     render() {
-        const dialogFooter = (
-            <Button label="Login" icon="pi pi-user" onClick={() => this.setState({dialogValue:false})} />
-        );
-        
-        const dataViewHeader = (
-            <div className="p-grid">
-                <div className="p-col-6 p-md-8 filter-container">
-                    <div style={{position:'relative'}}>
-                        <InputText placeholder="Search by brand" onKeyUp={e => this.dv.filter(e.target.value)} />
-                    </div>
-                </div>
-                <div className="p-col-6 p-md-4" style={{textAlign: 'right'}}>
-                    <DataViewLayoutOptions layout={this.state.layout} onChange={(e) => this.setState({layout: e.value})} />
-                </div>
-            </div>
-        );
-
         return (
             <div className="p-fluid">
                 <div className="p-grid">

@@ -1,3 +1,50 @@
 .bgimg {
     background-image: url('http://inn.spb.ru/images/700/DSC100781997.jpg');
 }
+
+.card-blank {
+    background-color: #ffffff;
+    padding: 1em;
+    margin-bottom: 16px;
+    @include border-radius($borderRadius);
+
+    &.card-w-title {
+        padding-bottom: 2em;
+    }
+
+    h1 {
+        margin: .5em 0 .5em 0;
+        border-bottom: 1px solid #d5d5d5;
+        padding: .1em;
+        font-size: 24px;
+
+        &:first-child {
+            margin: 0 0 .5em 0;
+        }
+    }
+}
+
+.card-weedLeft {
+    background-image: url("https://www.cannareupstore.com/image/cache/catalog/rsz_marijuana-banner-1140x380.png");
+    padding: 1em;
+    margin-bottom: 16px;
+    @include border-radius($borderRadius);
+
+    &.card-w-title {
+        padding-bottom: 2em;
+    }
+
+    h1 {
+        margin: .5em 0 .5em 0;
+        border-bottom: 1px solid #d5d5d5;
+        padding: .1em;
+        font-size: 24px;
+
+        &:first-child {
+            margin: 0 0 .5em 0;
+        }
+    }
+}
+.card-margin {
+	margin: 38px;
+}
