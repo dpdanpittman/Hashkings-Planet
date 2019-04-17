@@ -109,7 +109,6 @@ class App extends Component {
                 label: 'Ganja Farm', icon: 'pi pi-fw pi-globe', /*badge: '9',*/
                 items: [
 					{label: 'Garden', icon: 'pi pi-fw pi-file', to: '/garden'},
-					{label: 'Inventory', icon: 'pi pi-fw pi-table', to: '/inventory'},
                 ]
             },
             {
@@ -180,7 +179,6 @@ class App extends Component {
 				    <Route path="/login" component={LoginPage} />
                     <Route path="/" exact component={Dashboard} />
                     <Route path="/garden" component={GardenPage} />
-                    <Route path="/inventory" component={InventoryPage} />
                     <Route path="/market/gardenplots" component={MarketPlots} />
 					<Route path="/market/seedbank" component={MarketSeeds} />
                 </div>
