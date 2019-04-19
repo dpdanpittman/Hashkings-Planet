@@ -70,6 +70,16 @@ export class LoginPage extends Component {
                   <Button onClick={this.handleSubmit} label="Login" />
                 </div>
               </div>
+              <h4>
+                If you do not have Steem Keychain installed please click
+                <a
+                  href="https://chrome.google.com/webstore/detail/steem-keychain/lkcjlnjfpbikmcmbachjpdbijejflpcm?hl=en"
+                  alt="..."
+                >
+                  {" "}
+                  here
+                </a>
+              </h4>
             </div>
           </div>
         </Panel>

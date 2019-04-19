@@ -4,7 +4,7 @@ import Cookie from "js-cookie";
 export class AppInlineProfile extends Component {
     constructor() {
         super();
-		const username = Cookie.get("username");
+		Cookie.get("username");
         this.state = {
 			username: "Please Login"
         };
